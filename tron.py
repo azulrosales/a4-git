@@ -1,5 +1,4 @@
-from turtle import *
-
+import turtle
 from freegames import square, vector
 
 p1xy = vector(-100, 0)
@@ -37,17 +36,17 @@ def draw():
 
     square(p1xy.x, p1xy.y, 3, 'red')
     square(p2xy.x, p2xy.y, 3, 'blue')
-    update()
-    ontimer(draw, 50)
+    turtle.update()
+    turtle.ontimer(draw, 50)
 
 
-setup(420, 420, 370, 0)
-hideturtle()
-tracer(False)
-listen()
-onkey(lambda: p1aim.rotate(90), 'a')
-onkey(lambda: p1aim.rotate(-90), 'd')
-onkey(lambda: p2aim.rotate(90), 'j')
-onkey(lambda: p2aim.rotate(-90), 'l')
+turtle.setup(420, 420, 370, 0)
+turtle.hideturtle()
+turtle.tracer(False)
+turtle.listen()
+turtle.onkey(lambda: p1aim.rotate(90), 'a')
+turtle.onkey(lambda: p1aim.rotate(-90), 'd')
+turtle.onkey(lambda: p2aim.rotate(90), 'j')
+turtle.onkey(lambda: p2aim.rotate(-90), 'l')
 draw()
-done()
+turtle.done()
